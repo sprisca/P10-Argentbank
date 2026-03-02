@@ -1,4 +1,4 @@
-# ArgentBank - Application Bancaire Full-Stack
+# ArgentBank - Application Bancaire react
 
 Application bancaire complète développée avec React/Redux pour le frontend et Node.js/Express pour le backend, offrant une gestion de profil utilisateur sécurisée et des fonctionnalités de transaction via des appels API.
 
