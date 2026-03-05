@@ -6,9 +6,10 @@ import { useGetUser } from '../hooks/useGetUser';
 export const User = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const handleEditProfile = () => setIsModalOpen(!isModalOpen);
-
+  
 	useGetUser();
-	const { firstName, lastName } = useSelector((state) => state.user);
+	// Ajout de userName pour le modal
+	const { firstName, lastName, userName } = useSelector((state) => state.user);
 
 	return (
 		<div className='user-page bg-dark'>
@@ -23,14 +24,14 @@ export const User = () => {
 					className='user-page__form-button'
 					onClick={handleEditProfile}
 				>
-					Update
+					Edit your profile
 				</button>
 			</div>
 
 			{isModalOpen && (
 				<ModalEditProfile
 					onClose={handleEditProfile}
-					userInfo={{ firstName, lastName }}
+					userInfo={{ firstName, lastName, userName, }}
 				/>
 			)}
 			<div className='user-page__header'></div>
