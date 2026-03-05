@@ -1,4 +1,4 @@
-openapi: 3.0.3
+
 info:
   title: Argent Bank Transaction API
   description: API proposal for user transactions (list by month grouped by account, details, edit metadata)
